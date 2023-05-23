@@ -23,6 +23,10 @@ public class ArrayTasks {
      * length = 1  -> [1] length = 3  -> [1, 2, 3] length = 5  -> [1, 2, 3, 4, 5]
      */
     public int[] generateNumbers(int length) {
+        int[] newArr = new int[length];
+        for (int i = 1;i<=length;i++){
+            newArr[i-1] = i;
+        }
         return new int[length];
     }
 
