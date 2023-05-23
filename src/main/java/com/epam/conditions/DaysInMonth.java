@@ -5,6 +5,7 @@ public class DaysInMonth {
         int[] Month_length = {31,28,31,30,31,30,31,31,30,31,30,31};
         if (year < 0 || month < 2 || month >12){
             System.out.println("invalid date");
+            return;
         }
         if(isLeapYear(year)){
             Month_length[1] = 29;

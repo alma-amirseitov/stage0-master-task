@@ -11,7 +11,7 @@ public class IntegerDivider {
         int multiplicationResult = divisionResult * divider;
 
         if (multiplicationResult == dividend) {
-            System.out.println("Can be divided completely");
+            System.out.println("can be divided completely");
         } else {
             System.out.println("cannot be divided completely");
         }
