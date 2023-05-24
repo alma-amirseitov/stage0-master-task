@@ -1,5 +1,8 @@
 package com.epam.algorithms;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 /**
  * Here are the tasks for working with the arrays.
  * <p>
@@ -27,7 +30,7 @@ public class ArrayTasks {
         for (int i = 1;i<=length;i++){
             newArr[i-1] = i;
         }
-        return new int[length];
+        return newArr;
     }
 
     /**
@@ -88,7 +91,6 @@ public class ArrayTasks {
      */
     public int[] getOnlyPositiveNumbers(int[] arr) {
         int count = 0;
-        int N = arr.length;
         for (int j : arr) {
             if (j > 0) {
                 count++;
@@ -118,7 +120,12 @@ public class ArrayTasks {
      * arr = [[3, 1, 2,], [3,2]] -> [[2, 3], [1, 2, 3]] arr = [[5, 4], [7]]       -> [[7], [4, 5]]
      */
     public int[][] sortRaggedArray(int[][] arr) {
-        return null;
+        Arrays.sort(arr, Comparator.comparingInt(a -> a.length));
+        for (int[] arr1 : arr) {
+            Arrays.sort(arr1);
+        }
+
+        return arr;
     }
 
 }
